@@ -1450,10 +1450,14 @@ html.uk-shop-listing body:not(.editor_enable) #wrapwrap .uk-shop-top { display: 
 /* ---- pages uk.js draws. On /shop?uk= and /shop?ukp= ours replaces everything
    Odoo put in #wrap; on an Odoo product page it replaces the product itself
    and keeps whatever blocks the founders dropped below it. Odoo's product
-   stays in the page, hidden: its form is what adds an engraved bottle. */
+   stays in the page, hidden: its engraving radios are what uk.js reads. */
 html.uk-own body:not(.editor_enable) #wrap > :not(.uk-drawn) { display: none !important; }
 html.uk-pdp-on body:not(.editor_enable) #wrap > :is(#product_detail, #product_full_description, #oe_structure_website_sale_recommended_products) { display: none !important; }
 html.uk-pdp-on body.editor_enable .uk-drawn, html.uk-own body.editor_enable .uk-drawn { display: none !important; }
+/* ---- cart totals: our "Free" / "Added at checkout" stands in for Odoo's dash or 0.00 */
+#wrapwrap tr.uk-delivery-on [name="o_message_no_dm_set"], #wrapwrap tr.uk-delivery-on .monetary_field { display: none !important; }
+#wrapwrap tr:not(.uk-delivery-on) .uk-delivery { display: none; }
+#wrapwrap .uk-delivery { font-weight: 600; color: #1F7A4D; }
 /* ---- the form after it is sent */
 :is(#wrapwrap, body) .uk .uk-form-done { display: grid; gap: 12px; align-content: start; }
 :is(#wrapwrap, body) .uk .uk-form-done p:last-child { display: flex; flex-wrap: wrap; gap: 10px; }

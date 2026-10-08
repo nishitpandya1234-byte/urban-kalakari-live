@@ -20,7 +20,7 @@
    save into Odoo CRM through the same endpoint Odoo's Form block posts to. */
 (function () {
   "use strict";
-  var CFG = {"chrome": "<div aria-label=\"Announcements\" class=\"announce\"> <div class=\"announce-track\"> <span>Free Shipping Above ₹500<\/span><span>Reviving Indian Classics<\/span><span>Meaningful Aesthetic Designs<\/span><span>Inspired by and Made in India<\/span><span aria-hidden=\"true\">Free Shipping Above ₹500<\/span><span aria-hidden=\"true\">Reviving Indian Classics<\/span><span aria-hidden=\"true\">Meaningful Aesthetic Designs<\/span><span aria-hidden=\"true\">Inspired by and Made in India<\/span> <\/div> <\/div><header class=\"header\"> <div class=\"wrap header-bar\"> <a aria-label=\"Urban Kalakari, home\" class=\"brand\" href=\"/\"> <img alt=\"Urban Kalakari\" class=\"brand-word\" height=\"40\" src=\"https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/static/logo/wordmark-on-white-400.png\" width=\"120\"/> <\/a> <nav aria-label=\"Primary\" class=\"nav\"> <a href=\"/\">Home<\/a> <a href=\"/shop\">Shop<\/a> <a href=\"/bulk-orders\">Bulk Orders<\/a> <a href=\"/about-us\">About us<\/a> <a href=\"/contactus\">Contact us<\/a> <a href=\"/faq\">FAQ<\/a> <\/nav> <div class=\"header-actions\"> <button aria-label=\"Search products\" class=\"icon-btn\" data-open-search=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"7\"><\/circle><path d=\"m20 20-3.5-3.5\"><\/path><\/svg> <\/button> <a aria-label=\"Wishlist\" class=\"icon-btn\" href=\"/shop/wishlist\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z\"><\/path><\/svg> <span class=\"badge-count\" data-count=\"0\" data-wish-count=\"\"><\/span> <\/a> <a aria-label=\"Cart\" class=\"icon-btn\" href=\"/shop/cart\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\"><\/path><path d=\"M3 6h18\"><\/path><path d=\"M16 10a4 4 0 0 1-8 0\"><\/path><\/svg> <span class=\"badge-count\" data-cart-count=\"\" data-count=\"0\"><\/span> <\/a> <a class=\"btn btn-ghost btn-signin\" data-signed-out=\"\" href=\"/web/login\">Login / Sign Up<\/a> <a class=\"profile-chip\" data-signed-in=\"\" hidden=\"\" href=\"/my\"> <span aria-hidden=\"true\" class=\"profile-initial\" data-profile-initial=\"\"><\/span> <span class=\"profile-name\" data-profile-name=\"\"><\/span> <\/a> <button aria-expanded=\"false\" aria-label=\"Open menu\" class=\"icon-btn nav-toggle\" data-open-drawer=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M3 6h18M3 12h18M3 18h18\"><\/path><\/svg> <\/button> <\/div> <\/div> <\/header><div class=\"drawer\" data-open=\"false\" id=\"drawer\"> <button aria-label=\"Close menu\" class=\"drawer-scrim\" data-close-drawer=\"\" tabindex=\"-1\" type=\"button\"><\/button> <div aria-label=\"Menu\" aria-modal=\"true\" class=\"drawer-panel\" role=\"dialog\"> <div class=\"drawer-head\"> <img alt=\"Urban Kalakari\" height=\"37\" src=\"https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/static/logo/wordmark-on-white-400.png\" width=\"110\"/> <button aria-label=\"Close menu\" class=\"icon-btn\" data-close-drawer=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"><\/path><\/svg> <\/button> <\/div> <a href=\"/\">Home<\/a> <a href=\"/shop\">Shop<\/a> <a href=\"/bulk-orders\">Bulk Orders<\/a> <a href=\"/about-us\">About us<\/a> <a href=\"/contactus\">Contact us<\/a> <a href=\"/faq\">FAQ<\/a> <a data-signed-out=\"\" href=\"/web/login\">Login / Sign Up<\/a> <a data-signed-in=\"\" hidden=\"\" href=\"/my\"><span data-profile-named=\"\" hidden=\"\"><span data-profile-fullname=\"\"><\/span><\/span><span data-profile-unnamed=\"\" hidden=\"\">My account<\/span><\/a> <a class=\"btn btn-accent\" href=\"https://wa.me/919601018223\" rel=\"noopener\" style=\"margin-top:18px\" target=\"_blank\">WhatsApp us<\/a> <\/div> <\/div><dialog aria-label=\"Search products\" class=\"search-dialog\" id=\"search-dialog\"> <form class=\"search-form\" id=\"search-form\" method=\"dialog\" role=\"search\"> <button aria-label=\"Search\" class=\"icon-btn search-go\" type=\"submit\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"7\"><\/circle><path d=\"m20 20-3.5-3.5\"><\/path><\/svg> <\/button> <input aria-label=\"Search products\" autocomplete=\"off\" enterkeyhint=\"search\" id=\"search-input\" placeholder=\"Search bottles, jars, zodiac signs…\" type=\"search\"/> <button aria-label=\"Close search\" class=\"icon-btn\" data-close-search=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"><\/path><\/svg> <\/button> <\/form> <div class=\"search-results\" data-filler=\"a all an and band bedroom best buy copper coppers drink for in india jewellery jewelry kalakari me minimal my new of online price prices shop show the urban water with\" data-jump='[{\"terms\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"zodiac\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"personality\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"engraving\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"half\", \"hammered\", \"tulip\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"printed\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"shaded\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"cup\", \"cups\", \"glass\", \"glasses\", \"mug\", \"mugs\", \"straw\", \"tumbler\", \"tumblers\", \"tumblr\"], \"url\": \"/shop?ukp=shop/copper-tumblers\"}, {\"terms\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"engraved\"], \"under\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"engrave\"], \"under\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"finger\", \"ring\", \"rings\"], \"url\": \"/shop?ukp=shop/copper-rings\"}, {\"terms\": [\"bundle\", \"bundles\", \"combo\", \"combos\", \"gift\", \"gifting\", \"gifts\", \"hamper\", \"hampers\", \"pair\", \"pairs\", \"present\", \"set\", \"sets\"], \"url\": \"/shop?ukp=shop/combo-sets\"}]' id=\"search-results\"><\/div> <\/dialog><a aria-label=\"Chat with us on WhatsApp\" class=\"fab-whatsapp\" href=\"https://wa.me/919601018223?text=Hi%20Urban%20Kalakari%21%20I%20have%20a%20question%20about%20your%20products\" rel=\"noopener\" target=\"_blank\"> <svg aria-hidden=\"true\" fill=\"currentColor\" viewbox=\"0 0 24 24\"><path d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23z\"><\/path><\/svg> <\/a><div aria-live=\"polite\" class=\"toast\" id=\"toast\" role=\"status\"><\/div>", "cdn": "https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/", "live": "https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-live@main/", "fallback": {"aquarius": "/shop?ukp=aquarius", "aries": "/shop?ukp=aries", "blossom-hour-copper-bottle": "/shop?ukp=blossom-hour-copper-bottle", "cancer": "/shop?ukp=cancer", "capricorn": "/shop?ukp=capricorn", "certified-overthinker": "/shop?ukp=certified-overthinker", "day-dreamer": "/shop?ukp=day-dreamer", "blue-shaded-dual-tone-bottle": "/shop?ukp=blue-shaded-dual-tone-bottle", "pink-shaded-dual-tone-bottle": "/shop?ukp=pink-shaded-dual-tone-bottle", "gemini": "/shop?ukp=gemini", "god-s-favourite-child": "/shop?ukp=god-s-favourite-child", "golden-hour-copper-bottle": "/shop?ukp=golden-hour-copper-bottle", "red-half-hammered-bottle": "/shop?ukp=red-half-hammered-bottle", "green-half-hammered-bottle": "/shop?ukp=green-half-hammered-bottle", "leo": "/shop?ukp=leo", "libra": "/shop?ukp=libra", "midnight-hour-copper-bottle": "/shop?ukp=midnight-hour-copper-bottle", "official-thirst-trap": "/shop?ukp=official-thirst-trap", "pisces": "/shop?ukp=pisces", "sagittarius": "/shop?ukp=sagittarius", "scorpio": "/shop?ukp=scorpio", "lavender-sipper-bottle": "/shop?ukp=lavender-sipper-bottle", "orange-sipper-bottle": "/shop?ukp=orange-sipper-bottle", "yellow-sipper-bottle": "/shop?ukp=yellow-sipper-bottle", "taurus": "/shop?ukp=taurus", "virgo": "/shop?ukp=virgo", "half-hammered-tulip-jar-coffee-brown": "/shop?ukp=half-hammered-tulip-jar-coffee-brown", "half-hammered-tulip-jar-orange-rust": "/shop?ukp=half-hammered-tulip-jar-orange-rust", "half-hammered-tulip-jar-sage-green": "/shop?ukp=half-hammered-tulip-jar-sage-green", "minimal-printed-bedroom-jar-cards-print": "/shop?ukp=minimal-printed-bedroom-jar-cards-print", "minimal-printed-bedroom-jar-copper-wavy": "/shop?ukp=minimal-printed-bedroom-jar-copper-wavy", "minimal-printed-bedroom-jar-pastel-floral": "/shop?ukp=minimal-printed-bedroom-jar-pastel-floral", "shaded-bedroom-jar-coffee-brown": "/shop?ukp=shaded-bedroom-jar-coffee-brown", "shaded-bedroom-jar-pastel-ivory-sage-green": "/shop?ukp=shaded-bedroom-jar-pastel-ivory-sage-green", "shaded-bedroom-jar-pastel-yellow-blue": "/shop?ukp=shaded-bedroom-jar-pastel-yellow-blue", "charcoal-gray-tumbler-with-copper-straw": "/shop?ukp=charcoal-gray-tumbler-with-copper-straw", "ivory-lavender-multi-shaded-tumbler-with-copper-straw": "/shop?ukp=ivory-lavender-multi-shaded-tumbler-with-copper-straw", "pink-beige-striped-tumbler-with-copper-straw": "/shop?ukp=pink-beige-striped-tumbler-with-copper-straw", "braided-copper-bracelet": "/shop?ukp=braided-copper-bracelet", "chain-style-copper-bracelet": "/shop?ukp=chain-style-copper-bracelet", "designer-personalized-name-engraved-copper-bracelet": "/shop?ukp=designer-personalized-name-engraved-copper-bracelet", "leaf-style-copper-bracelet": "/shop?ukp=leaf-style-copper-bracelet", "plain-personalized-name-engraved-copper-bracelet": "/shop?ukp=plain-personalized-name-engraved-copper-bracelet", "watch-style-copper-bracelet": "/shop?ukp=watch-style-copper-bracelet", "wavy-copper-ring": "/shop?ukp=wavy-copper-ring", "zig-zag-copper-ring": "/shop?ukp=zig-zag-copper-ring", "printed-bottle-jar-two-glasses": "/shop?ukp=printed-bottle-jar-two-glasses", "evil-eye-bottle-two-glasses": "/shop?ukp=evil-eye-bottle-two-glasses", "half-hammered-bottle-two-glasses": "/shop?ukp=half-hammered-bottle-two-glasses", "multi-shaded-blue-bottle-two-glasses": "/shop?ukp=multi-shaded-blue-bottle-two-glasses", "printed-bedroom-jar-two-glasses": "/shop?ukp=printed-bedroom-jar-two-glasses", "shaded-bedroom-jar-two-glasses": "/shop?ukp=shaded-bedroom-jar-two-glasses", "ring-bracelet-set": "/shop?ukp=ring-bracelet-set"}, "names": {}, "remap": {"/copper-bottles": "/shop?uk=copper-bottles", "/copper-jars": "/shop?uk=copper-jars", "/copper-tumblers": "/shop?uk=copper-tumblers", "/copper-bracelets": "/shop?uk=copper-bracelets", "/copper-rings": "/shop?uk=copper-rings", "/combo-sets": "/shop?uk=combo-sets", "/all-products": "/shop?uk=all"}, "links": {"shop": "/shop", "wishlist": "/shop/wishlist", "contact": null}, "phone": "919601018223"};
+  var CFG = {"chrome": "<div aria-label=\"Announcements\" class=\"announce\"> <div class=\"announce-track\"> <span>Free Shipping Above ₹500<\/span><span>Reviving Indian Classics<\/span><span>Meaningful Aesthetic Designs<\/span><span>Inspired by and Made in India<\/span><span aria-hidden=\"true\">Free Shipping Above ₹500<\/span><span aria-hidden=\"true\">Reviving Indian Classics<\/span><span aria-hidden=\"true\">Meaningful Aesthetic Designs<\/span><span aria-hidden=\"true\">Inspired by and Made in India<\/span> <\/div> <\/div><header class=\"header\"> <div class=\"wrap header-bar\"> <a aria-label=\"Urban Kalakari, home\" class=\"brand\" href=\"/\"> <img alt=\"Urban Kalakari\" class=\"brand-word\" height=\"40\" src=\"https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/static/logo/wordmark-on-white-400.png\" width=\"120\"/> <\/a> <nav aria-label=\"Primary\" class=\"nav\"> <a href=\"/\">Home<\/a> <a href=\"/shop\">Shop<\/a> <a href=\"/bulk-orders\">Bulk Orders<\/a> <a href=\"/about-us\">About us<\/a> <a href=\"/contact-us\">Contact us<\/a> <a href=\"/faq\">FAQ<\/a> <\/nav> <div class=\"header-actions\"> <button aria-label=\"Search products\" class=\"icon-btn\" data-open-search=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"7\"><\/circle><path d=\"m20 20-3.5-3.5\"><\/path><\/svg> <\/button> <a aria-label=\"Wishlist\" class=\"icon-btn\" href=\"/shop/wishlist\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z\"><\/path><\/svg> <span class=\"badge-count\" data-count=\"0\" data-wish-count=\"\"><\/span> <\/a> <a aria-label=\"Cart\" class=\"icon-btn\" href=\"/shop/cart\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\"><\/path><path d=\"M3 6h18\"><\/path><path d=\"M16 10a4 4 0 0 1-8 0\"><\/path><\/svg> <span class=\"badge-count\" data-cart-count=\"\" data-count=\"0\"><\/span> <\/a> <a class=\"btn btn-ghost btn-signin\" data-signed-out=\"\" href=\"/web/login\">Login / Sign Up<\/a> <a class=\"profile-chip\" data-signed-in=\"\" hidden=\"\" href=\"/my\"> <span aria-hidden=\"true\" class=\"profile-initial\" data-profile-initial=\"\"><\/span> <span class=\"profile-name\" data-profile-name=\"\"><\/span> <\/a> <button aria-expanded=\"false\" aria-label=\"Open menu\" class=\"icon-btn nav-toggle\" data-open-drawer=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M3 6h18M3 12h18M3 18h18\"><\/path><\/svg> <\/button> <\/div> <\/div> <\/header><div class=\"drawer\" data-open=\"false\" id=\"drawer\"> <button aria-label=\"Close menu\" class=\"drawer-scrim\" data-close-drawer=\"\" tabindex=\"-1\" type=\"button\"><\/button> <div aria-label=\"Menu\" aria-modal=\"true\" class=\"drawer-panel\" role=\"dialog\"> <div class=\"drawer-head\"> <img alt=\"Urban Kalakari\" height=\"37\" src=\"https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/static/logo/wordmark-on-white-400.png\" width=\"110\"/> <button aria-label=\"Close menu\" class=\"icon-btn\" data-close-drawer=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"><\/path><\/svg> <\/button> <\/div> <a href=\"/\">Home<\/a> <a href=\"/shop\">Shop<\/a> <a href=\"/bulk-orders\">Bulk Orders<\/a> <a href=\"/about-us\">About us<\/a> <a href=\"/contact-us\">Contact us<\/a> <a href=\"/faq\">FAQ<\/a> <a data-signed-out=\"\" href=\"/web/login\">Login / Sign Up<\/a> <a data-signed-in=\"\" hidden=\"\" href=\"/my\"><span data-profile-named=\"\" hidden=\"\"><span data-profile-fullname=\"\"><\/span><\/span><span data-profile-unnamed=\"\" hidden=\"\">My account<\/span><\/a> <a class=\"btn btn-accent\" href=\"https://wa.me/919601018223\" rel=\"noopener\" style=\"margin-top:18px\" target=\"_blank\">WhatsApp us<\/a> <\/div> <\/div><dialog aria-label=\"Search products\" class=\"search-dialog\" id=\"search-dialog\"> <form class=\"search-form\" id=\"search-form\" method=\"dialog\" role=\"search\"> <button aria-label=\"Search\" class=\"icon-btn search-go\" type=\"submit\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"7\"><\/circle><path d=\"m20 20-3.5-3.5\"><\/path><\/svg> <\/button> <input aria-label=\"Search products\" autocomplete=\"off\" enterkeyhint=\"search\" id=\"search-input\" placeholder=\"Search bottles, jars, zodiac signs…\" type=\"search\"/> <button aria-label=\"Close search\" class=\"icon-btn\" data-close-search=\"\" type=\"button\"> <svg aria-hidden=\"true\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"2\" viewbox=\"0 0 24 24\"><path d=\"M18 6 6 18M6 6l12 12\"><\/path><\/svg> <\/button> <\/form> <div class=\"search-results\" data-filler=\"a all an and band bedroom best buy copper coppers drink for in india jewellery jewelry kalakari me minimal my new of online price prices shop show the urban water with\" data-jump='[{\"terms\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"zodiac\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"personality\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"engraving\"], \"under\": [\"bottel\", \"bottle\", \"bottles\", \"flask\", \"flasks\", \"hydration\", \"lota\", \"lotas\", \"sipper\", \"sippers\"], \"url\": \"/shop?ukp=shop/copper-bottles\"}, {\"terms\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"half\", \"hammered\", \"tulip\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"printed\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"shaded\"], \"under\": [\"bedside\", \"carafe\", \"carafes\", \"decanter\", \"decanters\", \"jar\", \"jars\", \"jug\", \"jugs\", \"kalash\", \"matka\", \"pitcher\", \"pitchers\", \"surahi\"], \"url\": \"/shop?ukp=shop/copper-jars\"}, {\"terms\": [\"cup\", \"cups\", \"glass\", \"glasses\", \"mug\", \"mugs\", \"straw\", \"tumbler\", \"tumblers\", \"tumblr\"], \"url\": \"/shop?ukp=shop/copper-tumblers\"}, {\"terms\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"engraved\"], \"under\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"engrave\"], \"under\": [\"bangle\", \"bangles\", \"bracelet\", \"bracelets\", \"cuff\", \"cuffs\", \"kada\", \"kadas\", \"wrist\", \"wristband\", \"wristbands\"], \"url\": \"/shop?ukp=shop/copper-bracelets\"}, {\"terms\": [\"finger\", \"ring\", \"rings\"], \"url\": \"/shop?ukp=shop/copper-rings\"}, {\"terms\": [\"bundle\", \"bundles\", \"combo\", \"combos\", \"gift\", \"gifting\", \"gifts\", \"hamper\", \"hampers\", \"pair\", \"pairs\", \"present\", \"set\", \"sets\"], \"url\": \"/shop?ukp=shop/combo-sets\"}]' id=\"search-results\"><\/div> <\/dialog><a aria-label=\"Chat with us on WhatsApp\" class=\"fab-whatsapp\" href=\"https://wa.me/919601018223?text=Hi%20Urban%20Kalakari%21%20I%20have%20a%20question%20about%20your%20products\" rel=\"noopener\" target=\"_blank\"> <svg aria-hidden=\"true\" fill=\"currentColor\" viewbox=\"0 0 24 24\"><path d=\"M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15s-.77.96-.94 1.16c-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.19 1.87.12.57-.08 1.75-.71 2-1.4.25-.69.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35zM12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.11.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23a8.2 8.2 0 0 1 5.82 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.24 8.23z\"><\/path><\/svg> <\/a><div aria-live=\"polite\" class=\"toast\" id=\"toast\" role=\"status\"><\/div>", "cdn": "https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-media@v2/", "live": "https://cdn.jsdelivr.net/gh/nishitpandya1234-byte/urban-kalakari-live@main/", "fallback": {"aquarius": "/shop?ukp=aquarius", "aries": "/shop?ukp=aries", "blossom-hour-copper-bottle": "/shop?ukp=blossom-hour-copper-bottle", "cancer": "/shop?ukp=cancer", "capricorn": "/shop?ukp=capricorn", "certified-overthinker": "/shop?ukp=certified-overthinker", "day-dreamer": "/shop?ukp=day-dreamer", "blue-shaded-dual-tone-bottle": "/shop?ukp=blue-shaded-dual-tone-bottle", "pink-shaded-dual-tone-bottle": "/shop?ukp=pink-shaded-dual-tone-bottle", "gemini": "/shop?ukp=gemini", "god-s-favourite-child": "/shop?ukp=god-s-favourite-child", "golden-hour-copper-bottle": "/shop?ukp=golden-hour-copper-bottle", "red-half-hammered-bottle": "/shop?ukp=red-half-hammered-bottle", "green-half-hammered-bottle": "/shop?ukp=green-half-hammered-bottle", "leo": "/shop?ukp=leo", "libra": "/shop?ukp=libra", "midnight-hour-copper-bottle": "/shop?ukp=midnight-hour-copper-bottle", "official-thirst-trap": "/shop?ukp=official-thirst-trap", "pisces": "/shop?ukp=pisces", "sagittarius": "/shop?ukp=sagittarius", "scorpio": "/shop?ukp=scorpio", "lavender-sipper-bottle": "/shop?ukp=lavender-sipper-bottle", "orange-sipper-bottle": "/shop?ukp=orange-sipper-bottle", "yellow-sipper-bottle": "/shop?ukp=yellow-sipper-bottle", "taurus": "/shop?ukp=taurus", "virgo": "/shop?ukp=virgo", "half-hammered-tulip-jar-coffee-brown": "/shop?ukp=half-hammered-tulip-jar-coffee-brown", "half-hammered-tulip-jar-orange-rust": "/shop?ukp=half-hammered-tulip-jar-orange-rust", "half-hammered-tulip-jar-sage-green": "/shop?ukp=half-hammered-tulip-jar-sage-green", "minimal-printed-bedroom-jar-cards-print": "/shop?ukp=minimal-printed-bedroom-jar-cards-print", "minimal-printed-bedroom-jar-copper-wavy": "/shop?ukp=minimal-printed-bedroom-jar-copper-wavy", "minimal-printed-bedroom-jar-pastel-floral": "/shop?ukp=minimal-printed-bedroom-jar-pastel-floral", "shaded-bedroom-jar-coffee-brown": "/shop?ukp=shaded-bedroom-jar-coffee-brown", "shaded-bedroom-jar-pastel-ivory-sage-green": "/shop?ukp=shaded-bedroom-jar-pastel-ivory-sage-green", "shaded-bedroom-jar-pastel-yellow-blue": "/shop?ukp=shaded-bedroom-jar-pastel-yellow-blue", "charcoal-gray-tumbler-with-copper-straw": "/shop?ukp=charcoal-gray-tumbler-with-copper-straw", "ivory-lavender-multi-shaded-tumbler-with-copper-straw": "/shop?ukp=ivory-lavender-multi-shaded-tumbler-with-copper-straw", "pink-beige-striped-tumbler-with-copper-straw": "/shop?ukp=pink-beige-striped-tumbler-with-copper-straw", "braided-copper-bracelet": "/shop?ukp=braided-copper-bracelet", "chain-style-copper-bracelet": "/shop?ukp=chain-style-copper-bracelet", "designer-personalized-name-engraved-copper-bracelet": "/shop?ukp=designer-personalized-name-engraved-copper-bracelet", "leaf-style-copper-bracelet": "/shop?ukp=leaf-style-copper-bracelet", "plain-personalized-name-engraved-copper-bracelet": "/shop?ukp=plain-personalized-name-engraved-copper-bracelet", "watch-style-copper-bracelet": "/shop?ukp=watch-style-copper-bracelet", "wavy-copper-ring": "/shop?ukp=wavy-copper-ring", "zig-zag-copper-ring": "/shop?ukp=zig-zag-copper-ring", "printed-bottle-jar-two-glasses": "/shop?ukp=printed-bottle-jar-two-glasses", "evil-eye-bottle-two-glasses": "/shop?ukp=evil-eye-bottle-two-glasses", "half-hammered-bottle-two-glasses": "/shop?ukp=half-hammered-bottle-two-glasses", "multi-shaded-blue-bottle-two-glasses": "/shop?ukp=multi-shaded-blue-bottle-two-glasses", "printed-bedroom-jar-two-glasses": "/shop?ukp=printed-bedroom-jar-two-glasses", "shaded-bedroom-jar-two-glasses": "/shop?ukp=shaded-bedroom-jar-two-glasses", "ring-bracelet-set": "/shop?ukp=ring-bracelet-set"}, "names": {}, "remap": {"/copper-bottles": "/shop?uk=copper-bottles", "/copper-jars": "/shop?uk=copper-jars", "/copper-tumblers": "/shop?uk=copper-tumblers", "/copper-bracelets": "/shop?uk=copper-bracelets", "/copper-rings": "/shop?uk=copper-rings", "/combo-sets": "/shop?uk=combo-sets", "/all-products": "/shop?uk=all", "/contactus": "/contact-us"}, "links": {"shop": "/shop", "wishlist": "/shop/wishlist", "contact": "/contact-us"}, "phone": "919601018223", "freeMin": 500};
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var ROOT = "";          // the lifted search code prefixes this to every URL
@@ -1476,10 +1476,12 @@
     var ribbon = $(".o_wsale_ribbon", $("#product_detail") || document);
     var soldOut = !odooAdd || odooAdd.disabled || !!wrapHidden ||
                   !!(ribbon && /sold\s*out|out\s*of\s*stock/i.test(ribbon.textContent));
-    // engraving: only where Odoo has somewhere to keep the name
-    var custom = $(".js_add_cart_variants .variant_custom_value", odoo);
+    // engraving: only where Odoo has the attribute, and at Odoo's charge
     var engrave = $(".engrave-box", box);
-    if (engrave && !custom) engrave.hidden = true;
+    if (engrave) {
+      if (!engraveAttr(odoo)) engrave.hidden = true;
+      else initEngraveCharge(box, o, odoo, price);
+    }
     // the straw is its own Odoo product; no product, no tick box
     var straw = $("[data-addon]", box);
     if (straw && !strawProduct()) straw.closest(".addon-box").hidden = true;
@@ -1493,6 +1495,62 @@
     var wish = $(".buy-row [data-wish]", box);
     if (wish) wish.setAttribute("aria-pressed", wishIds().indexOf(o.pid) > -1 ? "true" : "false");
     box.setAttribute("data-uk-odoo", o.tmpl);
+  }
+
+  /* Engraving on Odoo is a never-a-variant attribute: a free "No engraving"
+     value and a free-text "Name" value that carries the charge. Odoo draws the
+     text field only after "Name" is ticked, so it is the radios we read. */
+  function engraveAttr(odoo) {
+    var custom = $(".js_add_cart_variants input.no_variant[data-is-custom]", odoo);
+    if (!custom) return null;
+    var plain = $$('.js_add_cart_variants input[name="' + custom.name + '"]', odoo)
+      .filter(function (r) { return r !== custom; })[0] || null;
+    return { custom: custom, plain: plain };
+  }
+
+  // the attribute values Odoo would send, with the engraving one set by `named`
+  function chosenValues(odoo, eng, named, noVariantOnly) {
+    var ids = [];
+    $$(".js_add_cart_variants input.js_variant_change:checked, .js_add_cart_variants select.js_variant_change", odoo)
+      .forEach(function (el) {
+        if (eng && el.name === eng.custom.name) return;
+        if (noVariantOnly && !el.classList.contains("no_variant")) return;
+        var v = parseInt(el.value, 10);
+        if (v) ids.push(v);
+      });
+    if (eng) {
+      var pick = named ? eng.custom : eng.plain;
+      if (pick) ids.push(parseInt(pick.value, 10));
+    }
+    return ids;
+  }
+
+  function initEngraveCharge(box, o, odoo, base) {
+    var eng = engraveAttr(odoo);
+    var input = $("[data-engrave]", box);
+    var hint = $(".engrave-box label .hint", box);
+    var amount = $("[data-price]", box);
+    var extra = 0;
+    var ask = function (named) {
+      return rpc("/website_sale/get_combination_info", {
+        product_template_id: o.tmpl, product_id: false, add_qty: 1, parent_combination: [],
+        combination: chosenValues(odoo, eng, named, false)
+      }).then(function (r) { return r && r.price; });
+    };
+    var show = function () {
+      if (!amount || !base) return;
+      var named = input && input.value.trim();
+      amount.setAttribute("data-base", base + (named ? extra : 0));
+      var addon = $("[data-addon]", box);
+      if (addon) addon.dispatchEvent(new Event("change", { bubbles: true }));
+      else amount.textContent = rupees(base + (named ? extra : 0));
+    };
+    Promise.all([ask(true), ask(false)]).then(function (p) {
+      extra = p[0] && p[1] ? Math.max(0, p[0] - p[1]) : 0;
+      if (hint) hint.textContent = extra ? "(+ " + rupees(extra) + ", up to 12 characters)" : "(free, up to 12 characters)";
+      show();
+    }).catch(function () {});
+    if (input) input.addEventListener("input", show);
   }
 
   function strawProduct() {
@@ -1542,8 +1600,8 @@
     if (!o) return;
     var odoo = $("#product_details");
     var n = qty(box);
-    var name = ($("[data-engrave]", box) || {}).value;
-    var custom = odoo && $(".js_add_cart_variants .variant_custom_value", odoo);
+    var name = (($("[data-engrave]", box) || {}).value || "").trim();
+    var eng = odoo && engraveAttr(odoo);
     var strawBox = $("[data-addon]", box);
     var withStraw = strawBox && strawBox.checked && strawProduct();
     var done = function () {
@@ -1559,30 +1617,15 @@
       toast("Added to cart.");
     };
     btn.disabled = true;
-    if (custom) {
-      // Odoo's own form carries the engraving: fill it and press its button
-      var odooQty = $('input[name="add_qty"]', odoo);
-      if (odooQty) odooQty.value = n;
-      custom.value = (name || "").trim();
-      custom.dispatchEvent(new Event("input", { bubbles: true }));
-      custom.dispatchEvent(new Event("change", { bubbles: true }));
-      var before = odooCount(".my_cart_quantity");
-      var waited = 0;
-      var tick = setInterval(function () {
-        waited += 250;
-        if (odooCount(".my_cart_quantity") !== before) {
-          clearInterval(tick);
-          syncCounts();
-          Promise.resolve(done()).then(after, after);
-        } else if (waited > 8000) {
-          clearInterval(tick);
-          btn.disabled = false;
-        }
-      }, 250);
-      $('[name="add_to_cart"]', odoo).click();
-      return;
+    var params = { product_template_id: o.tmpl, product_id: o.pid, quantity: n };
+    if (eng) {
+      // the name goes on the order line as Odoo's own free-text value
+      params.no_variant_attribute_value_ids = chosenValues(odoo, eng, !!name, true);
+      params.product_custom_attribute_values = name
+        ? [{ custom_product_template_attribute_value_id: parseInt(eng.custom.value, 10), custom_value: name }]
+        : [];
     }
-    rpc("/shop/cart/add", { product_template_id: o.tmpl, product_id: o.pid, quantity: n })
+    rpc("/shop/cart/add", params)
       .then(function (res) {
         if (res && typeof res.cart_quantity === "number") setCartCount(res.cart_quantity);
         if (res && res.quantity === 0) { btn.disabled = false; toast("That one is sold out."); return; }
@@ -1625,6 +1668,51 @@
     }
   }
 
+  /* ---------- cart and checkout totals ----------
+     Odoo shows "-" for delivery until a method is picked, and no tax line when
+     prices already include GST. The founders want "Free" and a GST line. Odoo
+     redraws the summary on every quantity change, so this re-runs on change. */
+  function cartTotals() {
+    var free = CFG.freeMin || 0;
+    $$('table[name="cart_total_table"]').forEach(function (table) {
+      var total = odooNum($('tr[name="o_order_total"] .oe_currency_value', table));
+      var row = $('tr[name="o_order_delivery"]', table);
+      if (row) {
+        var dash = $('[name="o_message_no_dm_set"]', row);
+        var money = $(".monetary_field", row);
+        var picked = !dash || dash.classList.contains("d-none");
+        var charge = odooNum(money && $(".oe_currency_value", money));
+        var label = $(".uk-delivery", row);
+        if (!label) {
+          label = document.createElement("span");
+          label.className = "uk-delivery";
+          (money || dash).parentNode.appendChild(label);
+        }
+        var text = picked ? (charge ? "" : "Free") : (total >= free ? "Free" : "Added at checkout");
+        if (label.textContent !== text) label.textContent = text;
+        row.classList.toggle("uk-delivery-on", !!text);
+      }
+      var last = $('tr[name="o_order_total"]', table);
+      if (last && !$(".uk-gst", table)) {
+        var tr = document.createElement("tr");
+        tr.className = "uk-gst";
+        tr.innerHTML = '<td colspan="3" class="border-0 ps-0 pe-0 pt-0 pb-2 text-muted small text-end">All prices include GST</td>';
+        last.parentNode.insertBefore(tr, last.nextSibling);
+      }
+    });
+  }
+
+  function initCartTotals() {
+    if (!/^\/shop\/(cart|checkout|address|payment|confirmation|extra_info)\/?$/.test(location.pathname)) return;
+    cartTotals();
+    var busy = false;
+    new MutationObserver(function () {
+      if (busy) return;
+      busy = true;
+      requestAnimationFrame(function () { cartTotals(); busy = false; });
+    }).observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ["class"] });
+  }
+
   /* ---------- boot ---------- */
 
   function boot() {
@@ -1635,7 +1723,7 @@
     markShop();
     fixLinks();
     $$(".uk [data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
-    initOdooForms(); initCardClicks();
+    initOdooForms(); initCardClicks(); initCartTotals();
     // search reads `catalog` each time it renders, so it can open before the
     // catalogue lands; until then it offers nothing rather than failing
     if ($("#search-dialog")) initSearch();
