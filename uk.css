@@ -1458,6 +1458,14 @@ html.uk-pdp-on body.editor_enable .uk-drawn, html.uk-own body.editor_enable .uk-
 #wrapwrap tr.uk-delivery-on [name="o_message_no_dm_set"], #wrapwrap tr.uk-delivery-on .monetary_field { display: none !important; }
 #wrapwrap tr:not(.uk-delivery-on) .uk-delivery { display: none; }
 #wrapwrap .uk-delivery { font-weight: 600; color: #1F7A4D; }
+/* 9 Oct: Rs 99 under Rs 500 is a charge, not good news; MRP struck on every
+   line, the festive discount in green, our total standing in for Odoo's */
+#wrapwrap tr.uk-delivery-fee .uk-delivery { color: inherit; font-weight: 400; }
+#wrapwrap tr[data-uk="festive"] td { color: #1F7A4D !important; }
+#wrapwrap tr[data-uk="free-note"] td { color: #FF7B28; text-align: left; }
+#wrapwrap tr[data-uk][hidden] { display: none; }
+#wrapwrap .uk-line-mrp { color: #8a8f98; font-weight: 400; font-size: .85em; margin-right: .45em; text-decoration-thickness: 1px; }
+#wrapwrap .uk-hide { display: none !important; }
 /* ---- the form after it is sent */
 :is(#wrapwrap, body) .uk .uk-form-done { display: grid; gap: 12px; align-content: start; }
 :is(#wrapwrap, body) .uk .uk-form-done p:last-child { display: flex; flex-wrap: wrap; gap: 10px; }
